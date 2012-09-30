@@ -6,9 +6,9 @@ Allows you to create delicious APIs for MongoDB.
 Settings
 --------
 
-MONGODB_HOST = None
-MONGODB_PORT = None
-MONGODB_DATABASE = "database_name"
+    MONGODB_HOST = None
+    MONGODB_PORT = None
+    MONGODB_DATABASE = "database_name"
 
 Example of Usage
 ----------------

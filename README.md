@@ -10,6 +10,10 @@ Settings
     MONGODB_PORT = None
     MONGODB_DATABASE = "database_name"
 
+    # optional:
+    MONGODB_USERNAME = None
+    MONGODB_PASSWORD = None
+
 Example of Usage
 ----------------
 
@@ -30,8 +34,9 @@ Example of Usage
             authorization = Authorization()
             object_class = Document
             collection = "documents" # collection name
-            
 
 Contributors
 ------------
 Ferrix Hovi (<https://github.com/ferrix>)
+
+

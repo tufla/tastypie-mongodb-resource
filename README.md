@@ -10,6 +10,10 @@ Settings
     MONGODB_PORT = None
     MONGODB_DATABASE = "database_name"
 
+    # optional:
+    MONGODB_USERNAME = None
+    MONGODB_PASSWORD = None
+
 Example of Usage
 ----------------
 

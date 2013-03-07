@@ -30,3 +30,8 @@ Example of Usage
             authorization = Authorization()
             object_class = Document
             collection = "documents" # collection name
+            
+
+Contributors
+------------
+Ferrix Hovi (<https://github.com/ferrix>)

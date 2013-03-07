@@ -1,5 +1,5 @@
 from bson import ObjectId
-from pymongo import MongoClient
+from pymongo import MongoClient, Database
 
 from django.core.exceptions import ImproperlyConfigured
 from django.core.urlresolvers import reverse
@@ -9,11 +9,16 @@ from tastypie.bundle import Bundle
 from tastypie.resources import Resource
 
 
-db = MongoClient(
+db = Database(MongoClient(
     host=getattr(settings, "MONGODB_HOST", None),
     port=getattr(settings, "MONGODB_PORT", None)
-)[settings.MONGODB_DATABASE]
+), settings.MONGODB_DATABASE])
 
+username = getattr(settings, "MONGODB_USERNAME", None)
+password = getattr(settings, "MONGODB_PASSWORD", None)
+
+if username and password:
+    db.authenticate(username, password)
 
 class Document(dict):
     # dictionary-like object for mongodb documents.

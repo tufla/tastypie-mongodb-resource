@@ -1,5 +1,6 @@
 from bson import ObjectId
-from pymongo import MongoClient, Database
+from pymongo import MongoClient 
+from pymongo.database import Database
 
 from django.core.exceptions import ImproperlyConfigured
 from django.core.urlresolvers import reverse
@@ -12,7 +13,7 @@ from tastypie.resources import Resource
 db = Database(MongoClient(
     host=getattr(settings, "MONGODB_HOST", None),
     port=getattr(settings, "MONGODB_PORT", None)
-), settings.MONGODB_DATABASE])
+), settings.MONGODB_DATABASE)
 
 username = getattr(settings, "MONGODB_USERNAME", None)
 password = getattr(settings, "MONGODB_PASSWORD", None)
